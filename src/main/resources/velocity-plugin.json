@@ -1,0 +1,7 @@
+{
+  "id": "ban-system",
+  "name": "BanSystem",
+  "version": "@version@",
+  "main": "fr.azodox.bansystem.BanSystem",
+  "author": "Azodox_"
+}

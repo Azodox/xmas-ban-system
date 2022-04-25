@@ -1,0 +1,40 @@
+# Use arrays for multiple lines.
+# You can also use & + color character to manages colors.
+
+# Available placeholders :
+# %player% : Player's name
+# %remaining% : Time remaining before unban
+# %author% : Author of player's ban
+# %reason% : The reason of his ban
+[Ban]
+connection-forbidden=[
+"&8&m               ",
+"&4Vous êtes banni !",
+"",
+"&eTemps restant : %remaining%",
+"&eRaison : %reason%",
+"&8&m               "] # It's when a ban player tries to join the server.
+already-banned=["", ""] # When someone wants to ban a player already banned.
+ban-kicked=["", ""] # Message when the player has been banned while connected to the server and get kicked.
+you-have-ban-perm=["", ""] # Message send to the author of a ban that never ends.
+
+[Mute]
+you-cannot-talk=["", ""] # Send to the muted player when he is muted and try to chat.
+already-muted=["", ""] # Same than above.
+you-have-been-muted=["", ""] # Same principe as above but the player is not kicked, it's send to him.
+you-have-mute-perm=["", ""] # Same than above.
+
+# This section is for the messages with durations
+
+# Available placeholders :
+# %player% : Player's name
+# %duration% : Sanction's duration
+# %reason% : Sanction's reason
+[Timestamp.Messages]
+you-have-ban-x-time=["", ""] # Messages when you wanna ban someone but with specified duration.
+you-have-mute-x-time=["", ""] # Same than above.
+
+# No placeholder available
+[Messages]
+ban-help=["", ""] # Help sent when someone doesn't type correctly the command.
+mute-help=["", ""] # Same than above.
