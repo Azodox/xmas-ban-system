@@ -75,6 +75,11 @@ public class CheckCommand implements SimpleCommand {
     }
 
     @Override
+    public boolean hasPermission(Invocation invocation) {
+        return invocation.source().hasPermission("xmas.moderation.check");
+    }
+
+    @Override
     public List<String> suggest(Invocation invocation) {
         return SimpleCommand.super.suggest(invocation);
     }

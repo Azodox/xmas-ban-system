@@ -27,6 +27,11 @@ public class BanSystemCommand implements SimpleCommand {
     }
 
     @Override
+    public boolean hasPermission(Invocation invocation) {
+        return invocation.source().hasPermission("xmas.command.bansystem");
+    }
+
+    @Override
     public List<String> suggest(Invocation invocation) {
         return SimpleCommand.super.suggest(invocation);
     }

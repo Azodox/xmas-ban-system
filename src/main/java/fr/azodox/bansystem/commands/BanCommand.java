@@ -111,6 +111,11 @@ public class BanCommand implements SimpleCommand {
         return SimpleCommand.super.suggest(invocation);
     }
 
+    @Override
+    public boolean hasPermission(Invocation invocation) {
+        return invocation.source().hasPermission("xmas.moderation.ban");
+    }
+
     public void helpMessage(CommandSource sender){
         sender.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize(Configs.MESSAGE_CONFIG.BAN_HELP));
     }

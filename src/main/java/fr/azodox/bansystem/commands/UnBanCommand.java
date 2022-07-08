@@ -50,6 +50,11 @@ public class UnBanCommand implements SimpleCommand {
     }
 
     @Override
+    public boolean hasPermission(Invocation invocation) {
+        return invocation.source().hasPermission("xmas.moderation.unban");
+    }
+
+    @Override
     public List<String> suggest(Invocation invocation) {
         return SimpleCommand.super.suggest(invocation);
     }

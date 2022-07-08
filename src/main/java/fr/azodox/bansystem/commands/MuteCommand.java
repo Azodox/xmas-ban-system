@@ -104,6 +104,11 @@ public class MuteCommand implements SimpleCommand {
     }
 
     @Override
+    public boolean hasPermission(Invocation invocation) {
+        return invocation.source().hasPermission("xmas.moderation.mute");
+    }
+
+    @Override
     public List<String> suggest(Invocation invocation) {
         return SimpleCommand.super.suggest(invocation);
     }
